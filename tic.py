@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
-from random import randint
 #To play type in the coordinates for your move. 0:0 would be the top left.
 #0:2 would be the top right. 2:1 would be the bottom row in the middle.
 
-def get_cor(i):
+def get_cor(inp):
     """Gets the coordinates from the player"""
     while True:
         try:
-            i = int(input('Enter your coordinate here:'))
-            if i < 3:
-                return i
+            inp = int(input('Coordinate: '))
+            if inp < 3:
+                return  inp
             else:
                 print ('type in a valid coordinate')
-                #because the input, i,
+                #because the input, inp,
                 #is invalid the loop will continue until the input is valid.
         except ValueError:
             print ('ValueError')
@@ -80,15 +79,11 @@ def print_board(board):
         print(row)
     return
 
-
-
 def main():
     board = [[0, 0, 0],
             [0, 0, 0],
             [0, 0, 0]]
     player = 1
-    #i is just set as a empty variable. I know bad design, needs fixing.
-    i = None
     turn = 0
     move0 = None
     move1 = None
@@ -110,8 +105,8 @@ def main():
         while True:
             if count != 5:
                 print_board(board)
-                move0 = get_cor(i)
-                move1 = get_cor(i)
+                move0 = get_cor(None)
+                move1 = get_cor(None)
                 if board[move0][move1] == 0:
                     board[move0][move1] = 1
                     count += 1
@@ -136,8 +131,8 @@ def main():
             print_board(board)
             #gets the coordinates
             print(player, 'turn.')
-            move0 = get_cor(i)
-            move1 = get_cor(i)
+            move0 = get_cor(None)
+            move1 = get_cor(None)
             print_board(board)
             print ('------------------------')
             move_check.legal(board, move0, move1)
