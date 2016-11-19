@@ -1,2 +1,2 @@
-# TicTock
-A bare-bone Tic-Tac-Toe game, written purely in Python
+# PyTic
+A simple Tic-Tac-Toe game, written purely in Python
