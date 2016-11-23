@@ -79,12 +79,12 @@ class board():
         	[0, 0, 0],
          	[0, 0, 0]]
 
-	def print_board(self):
-    	"""Prints the board"""
-    	#This is why you need comments.
-    	for row in self.board:
-        	print(row)
-    	return
+    def print_board(self):
+        """Prints the board"""
+        #This is why you need comments.
+        for row in self.board:
+            print(row)
+    return
 
 def main():
     player = 1
