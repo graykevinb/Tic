@@ -72,17 +72,21 @@ class Rules(object):
         else:
             return False
 
-def print_board(board):
-    """Prints the board"""
-    #This is why you need comments.
-    for row in board:
-        print(row)
-    return
+class board():
+
+    def __init__(self):
+        board = [[0, 0, 0],
+        	[0, 0, 0],
+         	[0, 0, 0]]
+
+	def print_board(self):
+    	"""Prints the board"""
+    	#This is why you need comments.
+    	for row in self.board:
+        	print(row)
+    	return
 
 def main():
-    board = [[0, 0, 0],
-            [0, 0, 0],
-            [0, 0, 0]]
     player = 1
     turn = 0
     move0 = None
@@ -151,5 +155,4 @@ def main():
         else:
             print ('Game ends in a draw')
             break
-
 main() 
