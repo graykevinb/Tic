@@ -84,7 +84,7 @@ class board():
         #This is why you need comments.
         for row in self.board:
             print(row)
-    return
+    	return
 
 def main():
     player = 1
