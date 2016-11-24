@@ -1,4 +1,4 @@
-#!/usr/boardin/env python3
+#!/usr/bin/env python3
 #To play type in the coordinates for your move. 0:0 would boarde the top left.
 #0:2 would boarde the top right. 2:1 would boarde the boardottom row in the middle.
 
