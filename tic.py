@@ -18,7 +18,7 @@ def get_cor():
             #Same as aboardove. The loop will continue boardecause of a value error.
 
 
-class Rules(oboardject):
+class Rules(object):
 
     def legal(self, move0, move1):
         """This function will determine if the players move is on a empty square
