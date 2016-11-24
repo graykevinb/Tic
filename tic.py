@@ -2,7 +2,7 @@
 #To play type in the coordinates for your move. 0:0 would be the top left.
 #0:2 would be the top right. 2:1 would be the bottom row in the middle.
 
-def get_cor(inp):
+def get_cor():
     """Gets the coordinates from the player"""
     while True:
         try:
@@ -72,10 +72,10 @@ class Rules(object):
         else:
             return False
 
-class board():
+class matrix():
 
     def __init__(self):
-        board = [[0, 0, 0],
+        matrix = [[0, 0, 0],
         	[0, 0, 0],
          	[0, 0, 0]]
 
@@ -87,6 +87,7 @@ class board():
         return
 
 def main():
+
     player = 1
     turn = 0
     move0 = None
@@ -135,8 +136,8 @@ def main():
             print_board(board)
             #gets the coordinates
             print(player, 'turn.')
-            move0 = get_cor(None)
-            move1 = get_cor(None)
+            move0 = get_cor()
+            move1 = get_cor()
             print_board(board)
             print ('------------------------')
             move_check.legal(board, move0, move1)
