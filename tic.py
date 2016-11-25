@@ -17,15 +17,31 @@ def get_cor():
             print ('ValueError')
             #Same as aboardove. The loop will continue boardecause of a value error.
 
+class Matrix(object):
+
+    def __init__(self):
+        self.board = [[0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0]]
+    
+    def print_board(self):
+        """Prints the matrix"""
+        for row in self.board:
+            print(row)
+        return
+
 
 class Rules(object):
+
+    def __init__(self):
+        self.m = Matrix()
 
     def legal(self, move0, move1):
         """This function will determine if the players move is on a empty square
     and return True for legal and False for illegal."""
         try:
             #checks if the coordinates are on a empty square.
-            if b.board[move0][move1] == 0:
+            if self.m.board[move0][move1] == 0:
                 return True
             else:
                 print ('Illegal move')
@@ -44,23 +60,9 @@ class Rules(object):
             else:
                 #returns false, game not finished.
                 return false
-        
-class matrix(object):
-
-    def __init__(self):
-        self.board = [[0, 0, 0],
-        	[0, 0, 0],
-         	[0, 0, 0]]
-
-    def print_board(self):
-        """Prints the b"""
-        #This is why you need comments.
-        for row in self.board:
-            print(row)
-        return
 
 def main():
-    b = matrix()
+    b = Matrix()
     player = 1
     turn = 0
     move0 = None
@@ -73,7 +75,7 @@ def main():
                 player = 2
             else:
                 player = 1
-            b.print_b()
+            b.print_board()
             #gets the coordinates
             print(player, 'turn.')
             move0 = get_cor()
