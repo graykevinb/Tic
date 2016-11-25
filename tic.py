@@ -52,7 +52,7 @@ class matrix(object):
         	[0, 0, 0],
          	[0, 0, 0]]
 
-    def print_b(self):
+    def print_board(self):
         """Prints the b"""
         #This is why you need comments.
         for row in self.board:
