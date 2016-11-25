@@ -36,10 +36,13 @@ class Rules(object):
 
     def win_check(self, player):
         """Checks if the current player has won."""
+        #This loop will cycle through each possible combination that is possible to win in.
+        #In theory.
         for x in range (0, 2):
             if b.board[x][y] == player and b.board[x][y+1] == player and b.board[x][y+1] == player:
                 return
             else:
+                #returns false, game not finished.
                 return false
         
 class matrix(object):
@@ -75,7 +78,7 @@ def main():
             print(player, 'turn.')
             move0 = get_cor()
             move1 = get_cor()
-            b.board()
+            b.print_board()
             print ('------------------------')
             move_check.legal(move0, move1)
             if move_check.legal(move0, move1) == True:
@@ -84,7 +87,7 @@ def main():
             else:
                 continue
             if move_check.win_check(player):
-                b.board()
+                b.print_board()
                 print ('Congratulations! You won player: ')
                 print(player)
                 break
