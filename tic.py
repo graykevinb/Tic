@@ -55,7 +55,7 @@ class Rules(object):
         #This loop will cycle through each possible combination that is possible to win in.
         #In theory.
         for x in range (0, 2):
-            if self.m.board[x][y] == player and self.m.board[x][y+1] == player and self.m.board[x][y+1] == player:
+            if self.m.board[x][0] == player and self.m.board[x][1] == player and self.m.board[x][1] == player:
                 return
             else:
                 #returns false, game not finished.
