@@ -45,7 +45,7 @@ class Rules(object):
 class matrix():
 
     def __init__(self):
-        board = [[0, 0, 0],
+        self.board = [[0, 0, 0],
         	[0, 0, 0],
          	[0, 0, 0]]
 
