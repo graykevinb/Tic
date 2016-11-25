@@ -59,7 +59,7 @@ class Rules(object):
                 return
             else:
                 #returns false, game not finished.
-                return false
+                return False
 
 def main():
     b = Matrix()
