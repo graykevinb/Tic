@@ -42,7 +42,7 @@ class Rules(object):
             else:
                 return false
         
-class matrix():
+class matrix(object):
 
     def __init__(self):
         self.board = [[0, 0, 0],
@@ -52,12 +52,12 @@ class matrix():
     def print_b(self):
         """Prints the b"""
         #This is why you need comments.
-        for row in self.b:
+        for row in self.board:
             print(row)
         return
 
 def main():
-    b = matrix
+    b = matrix()
     player = 1
     turn = 0
     move0 = None
@@ -70,7 +70,7 @@ def main():
                 player = 2
             else:
                 player = 1
-            b.board()
+            b.print_b()
             #gets the coordinates
             print(player, 'turn.')
             move0 = get_cor()
