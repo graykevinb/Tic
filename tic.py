@@ -36,41 +36,12 @@ class Rules(object):
 
     def win_check(self, board, player):
         """Checks if the current player has won."""
-        #Top Row Horizontal
-        if board[0][0] == player and board[0][1] == player and board[0][2] == player:
-            print('1')
-            return True
-        #Middle Row Horizontal
-        elif board[1][0] == player and board[1][1] == player and board[1][2] == player:
-            print('2')
-            return True
-        #Bottom Row Horizontal
-        elif board[2][0] == player and board[2][1] == player and board[2][2] == player:
-            print('3')
-            return True
-        #Left Vertical Row
-        elif board[0][0] == player and board [1][0] == player and board[2][0] == player:
-            print('4')
-            return True
-        #Middle Vertical Row
-        elif board[0][1] == player and board[1][1] == player and board[2][1] == player:
-            print('5')
-            return True
-        #Right Vertical Row
-        elif board[0][2] == player and board[1][2] == player and board[2][2] == player:
-            print('6')
-            return True
-        #Diagonal Row starting from top left and going down to the bottom right corner.
-        elif board[0][0] == player and board [1][1] == player and board[2][2] == player:
-            print('7')
-            return True
-        #Diagonal Row starting from bottom left and going up to the top right corner.
-        elif board[0][2] == player and board [1][1] == player and board[2][0] == player:
-            print('8')
-            return True
-        #Returns false if the player hasn't won.
-        else:
-            return False
+        for x in range (0, 2):
+            if board[x][0] == player and board[x][1] == player and board[x][2] == player:
+                return True
+            else:
+                pass
+        return False
 
 def print_board(board):
     """Prints the board"""
@@ -141,7 +112,7 @@ def main():
                 turn += 1
             else:
                 continue
-            if move_check.win_check(board, player):
+            if move_check.win_check(board, player) == True:
                 print_board(board)
                 print ('Congratulations! You won player: ')
                 print(player)
