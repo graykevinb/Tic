@@ -41,6 +41,17 @@ class Rules(object):
                 return True
             else:
                 pass
+        for y in range(0, 2):
+            if board[0][y] == player and board[1][y] == player and board[2][y] == player:
+                return True
+            else:
+                pass
+        if board[0][0] == player and board[1][1] == player and board[2][2] == player:
+            return True
+        elif board[0][2] == player and board[1][1] == player and board[2][0] == player:
+            return True
+        else:
+            pass
         return False
 
 def print_board(board):
