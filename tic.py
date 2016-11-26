@@ -35,17 +35,20 @@ class Rules(object):
             return False
 
     def win_check(self, board, player):
-        """Checks if the current player has won."""
+        """Returns True if the player has won, and False if the player hasn't won."""
+        #This loop checks for horizontal wins.
         for x in range (0, 2):
             if board[x][0] == player and board[x][1] == player and board[x][2] == player:
                 return True
             else:
                 pass
+        #This loop checks for vertical wins.
         for y in range(0, 2):
             if board[0][y] == player and board[1][y] == player and board[2][y] == player:
                 return True
             else:
                 pass
+        #This part checks for diagonal wins.
         if board[0][0] == player and board[1][1] == player and board[2][2] == player:
             return True
         elif board[0][2] == player and board[1][1] == player and board[2][0] == player:
