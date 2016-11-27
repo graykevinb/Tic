@@ -74,39 +74,7 @@ def main():
     move1 = None
     move_check = Rules()
     count = 0
-    print ('Welcome to tic! Tic is a tic tac toe game written entirely in python3!')
-    print ('To play type in the coordinate of where you want to go.')
-    tutorial = str(input('Would you like to do the tutorial? y or n.'))
-    if tutorial == 'y':
-        print (''' Let's get started!''')
-        print_board(board)
-        print ('''So there is the board and your probobly wondering how you move.\n
-        Am I correct? Anyways you move by typing in the cordinates of where\n
-        you want to go. So lets try it!
-        To move first type a number from 0 to 2 and press enter. Repeat.
-        Notice where it showed up. The system goes like this:
-        0:0 top right corner, 0:2 top left corner.
-        2:0 bottom left corner and so on.''')
-        while True:
-            if count != 5:
-                print_board(board)
-                move0 = get_cor(None)
-                move1 = get_cor(None)
-                if board[move0][move1] == 0:
-                    board[move0][move1] = 1
-                    count += 1
-                else:
-                    pass
-            else:
-                break
-        print ('Tutorial Complete!')
-        board = [[0, 0, 0],
-                [0, 0, 0],
-                [0, 0, 0]]
-    else:
-        pass
-
-
+    
     while True:
         if turn != 9:
             if player == 1:
