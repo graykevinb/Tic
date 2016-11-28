@@ -1,1 +1,8 @@
 Thanks for wanting to contribute!
+Tic has room for improvement, feel free to create a issue, create a patch, pull request, add to wiki, and you name it!
+Currently we should focus on the current project of adding a computer player. 
+More details available on the project page.
+
+How to create a patch.
+Please carefully and extensively test your patch before submitting. Also do not more changes in a single patch then necessary
+for the program to operate, or in reason. When fixing a bug, first report it in the issues section.
