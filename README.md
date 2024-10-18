@@ -1,3 +1,5 @@
+This was one of my first programs ever made. I made it at the age of probably 14 or 15. The code has bugs and is not perfect but I leave this as an archive as I'm proud of my first little game!
+
 A simple Tic-Tac-Toe game, written purely in Python
 
 ## How To Run and Play
